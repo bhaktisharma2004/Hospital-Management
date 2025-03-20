@@ -1,27 +1,22 @@
 import React from 'react';
 
-const Left = ({ heading, para, source1, source2, webLink, webText }) => {
+const Left = ({ heading, para, source1, source2}) => {
   return (
     <div className="relative w-full h-screen flex flex-col items-center">
       {/* Background image with low opacity */}
       <img 
-        className="absolute w-full h-[90%] object-cover opacity-30 z-0" 
+        className="absolute w-full h-full object-cover opacity-30 z-0" 
         src={source1} 
         alt="Background" 
       />
       
       
-      <div className="container relative  z-10 flex justify-around items-center mt-25">
+      <div className="container relative z-10 flex justify-around items-center mt-10">
         {/* Left section with text and link */}
-        <div className="flex flex-col space-y-7  ml-25">
+        <div className="flex flex-col space-y-5 ml-25">
           <h1 className="font-bold text-5xl w-[60%]">{heading}</h1>
           <p className="w-150 text-justify">{para}</p>
-          <a 
-            href={webLink} 
-            className="p-2 w-25 text-center font-bold bg-purple-900 text-amber-50 rounded-xl"
-          >
-            {webText}
-          </a>
+          
         </div>
         
 

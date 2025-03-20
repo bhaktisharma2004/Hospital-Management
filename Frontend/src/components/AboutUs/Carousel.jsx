@@ -1,42 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const employees = [
   {
     id: 1,
-    name: "Doctors",
-    role: "Well Skilled Doctors",
-    image: "assets/Doctors.jpeg",
+    name: "Akash Agarwal",
+    role: "Data Scientist",
+    image: "assets/Akash.webp",
   },
   {
     id: 2,
-    name: "Laboratories",
-    role: "Modern Machinery Lab",
-    image: "assets/Labs.jpeg",
+    name: "Aditya Vashishth",
+    role: "Data Scientist",
+    image: "assets/Aditya.webp",
   },
   {
     id: 3,
-    name: "Medicines",
-    role: "Large Inventory Medical",
-    image: "assets/Medicien.jpeg",
+    name: "Bhakti Sharma",
+    role: "Product Manager",
+    image: "assets/bhakti.webp",
   },
   {
     id: 4,
-    name: "Finance",
-    role: "Insurance Availability",
-    image: "assets/Patient.jpeg",
+    name: "Pratiksha Pathak",
+    role: "Full Stack Developer",
+    image: "assets/pratiksha.webp",
   },
   {
     id: 5,
-    name: "Staffs",
-    role: "Staff Management",
-    image: "assets/Staff.jpeg",
-  },
-  {
-    id: 6,
-    name: "Wards",
-    role: "Wards Management",
-    image: "assets/Wards.jpeg",
+    name: "Radhika Jadaun",
+    role: "UI/UX Designer",
+    image: "assets/radhika.webp",
   },
 ];
 
@@ -55,17 +49,9 @@ const Carousel = () => {
     );
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      goToNext();
-    }, 2000); // 2 seconds
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [currentIndex]); // Re-run effect when currentIndex changes
-
   return (
-    <div className="relative mb-25 h-100 w-full max-w-2xl mx-auto overflow-hidden rounded-lg shadow-lg">
-      <h1 className="font-bold text-center mb-5 text-4xl">Our Services</h1>
+    <div className="relative mb-25 w-full max-w-2xl mx-auto overflow-hidden  rounded-lg shadow-lg">
+      <h1 className="font-bold text-center mb-5 text-4xl" >Team Members</h1>
       {/* Carousel Container */}
       <div
         className="flex transition-transform duration-500 ease-in-out"
@@ -81,8 +67,8 @@ const Carousel = () => {
               alt={employee.name}
               className="w-32 h-32 rounded-full object-cover mb-4"
             />
-            <h2 className="text-2xl mb-2 font-bold text-gray-800">{employee.name}</h2>
-            <p className="mb-8 text-lg text-gray-600">{employee.role}</p>
+            <h2 className="text-2xl font-bold text-gray-800">{employee.name}</h2>
+            <p className="text-lg text-gray-600">{employee.role}</p>
           </div>
         ))}
       </div>

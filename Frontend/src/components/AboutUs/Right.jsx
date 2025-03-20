@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Left = ({ heading1, heading2, para, source, webLink, webText }) => {
+const Left = ({ heading1, heading2, para, source }) => {
   return (
-    <div className="relative w-full h-150 flex flex-col items-center">
+    <div className="relative w-full h-screen flex flex-col items-center">
       {/* Background image with low opacity */}
       
       
@@ -19,12 +19,7 @@ const Left = ({ heading1, heading2, para, source, webLink, webText }) => {
           <h3>{heading1}</h3>
         <h1 className=" text-5xl w-[60%]">{heading2}</h1>
           <p className="w-150 text-justify">{para}</p>
-          <a 
-            href={webLink} 
-            className="p-2 w-25 text-center font-bold bg-purple-900 text-amber-50 rounded-xl"
-          >
-            {webText}
-          </a>
+          
         </div>
       </div>
     </div>
