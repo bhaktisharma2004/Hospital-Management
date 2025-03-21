@@ -63,7 +63,7 @@ function Navbar() {
         <div className="register flex gap-5">
           <Link
             className="p-2 w-25 text-center font-bold bg-white text-green-600 rounded-2xl hover:bg-gray-100 transition-colors duration-300"
-            to="/SignIn"
+            to="/Login"
           >
             Sign In
           </Link>
