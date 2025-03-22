@@ -1,29 +1,55 @@
-import React, {useState}  from 'react'
-import Signupnav from './Signupnav';
+import React, { useState } from "react";
+import Signupnav from "./Signupnav";
 const Patient = () => {
-    const [date, setDate] = useState('');
+  const [date, setDate] = useState("");
   return (
-    <div>
-      <Signupnav/>
-      <div className="heading">
-        <h1></h1>
+    <div className="flex flex-col items-center">
+      <img
+        className="absolute w-full h-125 object-cover opacity-30 z-0"
+        src="assets/bg.jpg"
+        alt="Background"
+      />
+      <Signupnav />
+
+      <div className="heading text-center mb-5 ">
+        <h1 className="font-bold text-4xl">Sign Up</h1>
       </div>
 
-      <div className="Name">
-        <input type="text" placeholder='First Name' />
-        <input type="text" placeholder='Last Name' />
+      <div className="Name mb-5">
+        <input
+          type="text"
+          className="border-4 border-gray-500 rounded-lg p-2 w-100 mr-4"
+          placeholder="First Name"
+        />
+        <input
+          type="text"
+          className="border-4 border-gray-500 rounded-lg p-2 w-100"
+          placeholder="Last Name"
+        />
       </div>
 
-      <div className="details">
-        <input type="email" placeholder='Email' />
-        <input type="number" placeholder='Mobile Number' />
+      <div className="details mb-5">
+        <input
+          type="email"
+          className="border-4 border-gray-500 rounded-lg p-2 w-100 mr-4"
+          placeholder="Email"
+        />
+        <input
+          type="number"
+          className="border-4 border-gray-500 rounded-lg p-2 w-100"
+          placeholder="Mobile Number"
+        />
       </div>
-      
-      <div className="NIC">
-        <input type="number" placeholder='Adhar Card Number' />
+
+      <div className="NIC mb-5">
+        <input
+          type="number"
+          className="border-4 border-gray-500 rounded-lg p-2 w-100 mr-4"
+          placeholder="Adhar Card Number"
+        />
         <div className="relative inline-block">
           <input
-            className='border-4 border-gray-500 text-gray-500 rounded-lg p-2 w-158 appearance-none'
+            className="border-4 border-gray-500 text-gray-500 rounded-lg p-2 w-100 appearance-none"
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
@@ -36,25 +62,41 @@ const Patient = () => {
         </div>
       </div>
 
-          <div className="password">
-            <select name="" id="">
-                <option value="Gender">Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+      <div className="password mb-5">
+        <select className="border-4 border-gray-500 rounded-lg p-2 w-60 mr-12">
+          <option value="Gender">Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
 
-            <input type="password" placeholder='Password' />
-            <input type="password" placeholder='Confirm Password' />
-          </div>
-
-      <div className="message items-center flex flex-col">
-        <input className='border-4 border-gray-500 rounded-lg w-full h-30 mb-5' type="text" placeholder="Address" />
-        <a className='p-2 w-55 text-center font-bold bg-purple-800 text-amber-50 rounded-xl' href="/">Register</a>
+        <input
+          type="password"
+          className="border-4 border-gray-500 rounded-lg p-2 w-60 mr-12"
+          placeholder="Password"
+        />
+        <input
+          type="password"
+          className="border-4 border-gray-500 rounded-lg p-2 w-60 "
+          placeholder="Confirm Password"
+        />
       </div>
 
+      <div className="message items-center flex mb-5 flex-col">
+        <input
+          className="border-4 border-gray-500 rounded-lg w-205 h-30 mb-5"
+          type="text"
+          placeholder="Address"
+        />
+        <a
+          className="p-2 w-55 text-center font-bold bg-purple-800 text-amber-50 rounded-xl"
+          href="/"
+        >
+          Register
+        </a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Patient
+export default Patient;
