@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const Signupnav = () => {
   return (
-    <div className='flex w-full bg-gray-300 border-red-500 rounded-2xl justify-end gap-20 px-20'>
-      <Link to="/Register/Admin"><h1>Admin</h1></Link>
-      <Link to="/Register/Doctor"><h1>Doctor</h1></Link>
-      <Link to="/Register/Patient"><h1>Patient</h1></Link>
+    <div className='flex w-[58%] bg-green border-red-500 rounded-2xl justify-center items-center gap-20 px-20'>
+      <Link className='hover:bg-green-300 rounded-2xl px-4' to="/Register/Admin"><h1>Admin</h1></Link>
+      <Link className='hover:bg-green-300 rounded-2xl px-4' to="/Register/Doctor"><h1>Doctor</h1></Link>
+      <Link className='hover:bg-green-300 rounded-2xl  px-4' to="/Register/Patient"><h1>Patient</h1></Link>
     </div>
   )
 }
