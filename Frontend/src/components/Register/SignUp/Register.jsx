@@ -7,7 +7,7 @@ import Signupnav from './Signupnav';
 const Register = () => {
   return (
     <div>
-      <Signupnav />
+      <Patient/>
     </div>
   );
 }

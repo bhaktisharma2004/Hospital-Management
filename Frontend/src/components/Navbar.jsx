@@ -14,7 +14,7 @@ function Navbar() {
               alt="logo"
             />
             <span className="text-gray-800 text-lg font-bold hover:text-gray-600 transition-colors duration-300">
-              Fit-Pulse Medical
+              MediSphere Hospital
             </span>
           </Link>
         </div>

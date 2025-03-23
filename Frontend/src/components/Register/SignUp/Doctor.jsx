@@ -17,16 +17,17 @@ const Doctor = () => {
     <>
       {/* Background Image */}
       <img
-        className="absolute w-full h-[100%] object-cover opacity-30 z-0"
+        className="absolute w-full h-full object-cover opacity-30 z-0"
         src="/assets/bg.jpg" // Correct path to the image
         alt="Background"
       />
       <div className="flex flex-col items-center relative z-10 min-h-screen justify-center">
         <Signupnav />
 
-        <div className="bg-white bg-opacity-90 rounded-lg items-center justify-center shadow-2xl p-8 w-full max-w-4xl transform transition-all duration-500 hover:shadow-3xl">
+        <div className="bg-white bg-opacity-90 rounded-lg shadow-2xl p-7 w-full max-w-4xl transform transition-all duration-500 hover:shadow-3xl">
           <div className="heading text-center mb-8">
             <h1 className="font-bold text-4xl text-blue-900">Sign Up</h1>
+            <h3 className="mt-2 text-blue-900 text-xl" >Doctor</h3>
             <p className="text-gray-600">
               Join our healthcare community today!
             </p>
@@ -79,7 +80,9 @@ const Doctor = () => {
             <div className="password relative">
               <FaVenusMars className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
               <select className="border-2 border-blue-200 rounded-lg p-3 pl-10 w-full focus:border-blue-500 focus:outline-none">
-                <option className="text-blue-500" value="Gender">Gender</option>
+                <option className="text-blue-500" value="Gender">
+                  Gender
+                </option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
@@ -120,8 +123,9 @@ const Doctor = () => {
                 placeholder="Confirm Password"
               />
             </div>
+          </div>
 
-            <div className=" col-span-4 w-full button">
+            <div className="message  items-center flex mb-5 flex-col">
               <a
                 className="p-3 w-55 text-center font-bold bg-blue-600 text-white rounded-lg mt-6 hover:bg-blue-700 transition duration-300 transform hover:scale-105"
                 href="/"
@@ -129,7 +133,6 @@ const Doctor = () => {
                 Register
               </a>
             </div>
-          </div>
         </div>
       </div>
     </>
