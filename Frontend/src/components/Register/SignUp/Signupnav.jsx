@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 const Signupnav = () => {
   return (
     <div className='flex w-[58%] bg-green border-red-500 rounded-2xl justify-center items-center gap-20 px-20'>

@@ -14,17 +14,16 @@ const Patient = () => {
         alt="Background" 
       />
 
-      <div className="flex flex-col items-center relative z-10 min-h-screen justify-center">
+      <div className="flex flex-col items-center relative z-10  justify-center">
         <Signupnav />
 
-        <div className="bg-white bg-opacity-90 rounded-lg shadow-2xl p-8 w-full max-w-4xl transform transition-all duration-500 hover:shadow-3xl">
-          <div className="heading text-center mb-8">
-            <h1 className="font-bold text-4xl text-blue-900">Sign Up</h1>
-            <h3 className="mt-2 text-blue-900 text-xl" >Patient</h3>
+        <div className="bg-white bg-opacity-90 rounded-lg shadow-2xl p-5 w-full max-w-4xl transform transition-all duration-500 hover:shadow-3xl">
+          <div className="heading text-center mb-6">
+            <h1 className="font-bold text-4xl text-blue-900">Patient SignUp</h1>
             <p className="text-gray-600">Join our healthcare community today!</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="Name relative">
               <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
               <input

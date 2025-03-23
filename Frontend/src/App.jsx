@@ -12,12 +12,15 @@ import LogIn from './components/Register/LogIn/SignIn';
 import Admin from './components/Register/SignUp/Admin';
 import Doctor from './components/Register/SignUp/Doctor';
 import Patient from './components/Register/SignUp/Patient';
+import AdminLogIn from './components/Register/LogIn/AdminLogIn';
+import DoctorLogIn from './components/Register/LogIn/DoctorLogIn'
+import PatientLogIn from './components/Register/LogIn/PatientLogIn';
 
 const App = () => {
   const location = useLocation();
 
   // Define routes where the footer should not be visible
-  const noFooterRoutes = ['/Register', '/Register/Admin', '/Register/Patient', '/Register/Doctor'];
+  const noFooterRoutes = ['/Register', '/Register/Admin', '/Register/Patient', '/Register/Doctor','/Login', '/LogIn/Admin', '/LogIn/Doctor', '/LogIn/Patient',];
 
   // Check if the current route is in the noFooterRoutes array
   const shouldShowFooter = !noFooterRoutes.includes(location.pathname);
@@ -35,6 +38,9 @@ const App = () => {
         <Route path='/Register/Admin' element={<Admin />} />
         <Route path='/Register/Patient' element={<Patient />} />
         <Route path='/Register/Doctor' element={<Doctor />} />
+        <Route path='/Login/Admin' element={<AdminLogIn />} />
+        <Route path='/Login/Doctor' element={<DoctorLogIn />} />
+        <Route path='/Login/Patient' element={<PatientLogIn />} />
       </Routes>
       {shouldShowFooter && <Footer />}
     </div>
