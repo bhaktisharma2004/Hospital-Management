@@ -7,10 +7,10 @@ const Patient = () => {
 
   return (
     <>
-      {/* Background Image */}
+      
       <img 
         className="absolute w-full h-[100%] object-cover opacity-30 z-0" 
-        src="/assets/bg.jpg" // Correct path to the image
+        src="/assets/bg.jpg" 
         alt="Background" 
       />
 

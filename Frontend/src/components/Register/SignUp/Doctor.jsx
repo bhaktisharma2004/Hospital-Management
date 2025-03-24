@@ -15,10 +15,10 @@ import {
 const Doctor = () => {
   return (
     <>
-      {/* Background Image */}
+      
       <img
         className="absolute w-full h-full object-cover opacity-30 z-0"
-        src="/assets/bg.jpg" // Correct path to the image
+        src="/assets/bg.jpg" 
         alt="Background"
       />
       <div className="flex flex-col items-center relative z-10  justify-center">

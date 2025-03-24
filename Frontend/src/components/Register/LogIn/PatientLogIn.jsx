@@ -5,7 +5,6 @@ const DoctorLogIn = () => {
   const handleLogin = (event) => {
     event.preventDefault();
     console.log("Login button clicked");
-    // Add login logic and redirection here
   };
 
   return (
