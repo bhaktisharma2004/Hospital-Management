@@ -2,6 +2,7 @@ import React from "react";
 import Left from "./Left";
 import Right from "./Right";
 import TeamBase from "./TeamBase";
+import TeamBases from "./TeamBases";
 
 const AboutUs = () => {
   return (
@@ -28,6 +29,7 @@ const AboutUs = () => {
       />
 
       <TeamBase/>
+      {/* <TeamBases/> */}
     </div>
   );
 };
