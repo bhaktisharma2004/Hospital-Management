@@ -13,9 +13,9 @@ const Left = ({ heading, para, source1, source2, webLink, webText }) => {
       
       <div className="container relative  z-10 flex justify-around items-center mt-25">
         {/* Left section with text and link */}
-        <div className="flex flex-col space-y-7  ml-25">
-          <h1 className="font-bold text-5xl w-[60%]">{heading}</h1>
-          <p className="w-150 text-justify">{para}</p>
+        <div className="flex flex-col space-y-15  ml-25">
+          <h1 className="font-bold text-6xl w-[60%]">{heading}</h1>
+          <p className="w-195  text-xl text-justify">{para}</p>
           <a 
             href={webLink} 
             className="p-2 w-25 text-center font-bold bg-purple-900 text-amber-50 rounded-xl"

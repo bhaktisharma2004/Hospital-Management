@@ -28,8 +28,8 @@ const AboutUs = () => {
         webText="See More"
       />
 
-      <TeamBase/>
-      {/* <TeamBases/> */}
+      {/* <TeamBase/> */}
+      <TeamBases/>
     </div>
   );
 };
