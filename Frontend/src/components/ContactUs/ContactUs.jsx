@@ -42,7 +42,7 @@ const ContactUs = () => {
       image: "assets/Pratiksha1.png",
       email: "mailto:pratikshapathak430@gmail.com",
       github: "https://github.com/pratiksha-pathak2005",
-      linkedIn: "https://linkedin.com/in/pratiksha",
+      linkedIn: "https://www.linkedin.com/in/pratiksha-pathak-b0053b24b",
       quote: "Coding the future one line at a time"
     },
     {
