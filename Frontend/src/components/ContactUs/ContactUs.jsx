@@ -1,42 +1,23 @@
 import React, { useState } from "react";
 import { MdEmail } from 'react-icons/md';
 import { FaLinkedin, FaGithub, FaQuoteLeft } from "react-icons/fa";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const ContactUs = () => {
   const employees = [
     {
       id: 1,
-      name: "Akash Agarwal",
-      role: "Data Scientist",
-      image: "assets/Akash1.png",
-      email: "mailto:honeyagarwal043@gmail.com",
-      github: "https://github.com/itsakashagrawal",
-      linkedIn: "https://www.linkedin.com/in/akash-agarwal-a280692a0",
-      quote: "Transforming data into actionable insights"
-    },
-    {
-      id: 2,
-      name: "Aditya Vashishth",
-      role: "Data Scientist",
-      image: "assets/Aditya.webp",
-      email: "mailto:aditya.vashishth95@gmail.com",
-      github: "https://github.com/ThAditya",
-      linkedIn: "https://www.linkedin.com/in/aditya-vashishth-9547182a9",
-      quote: "Numbers tell stories, I just translate them"
-    },
-    {
-      id: 3,
       name: "Bhakti Sharma",
       role: "Product Manager",
       image: "assets/bhakti.webp",
-      email: "mailto:bhakti@example.com",
+      email: "mailto:bhaktisharma100@gmail.com",
       github: "https://github.com/bhakti",
       linkedIn: "https://linkedin.com/in/bhakti",
       quote: "Building products that users love"
     },
     {
-      id: 4,
+      id: 2,
       name: "Pratiksha Pathak",
       role: "Full Stack Developer",
       image: "assets/Pratiksha1.png",
@@ -46,14 +27,34 @@ const ContactUs = () => {
       quote: "Coding the future one line at a time"
     },
     {
-      id: 5,
+      id: 3,
       name: "Radhika Jadaun",
       role: "UI/UX Designer",
       image: "assets/radhika.webp",
-      email: "mailto:radhika@example.com",
+      email: "mailto:radhikajadaun36@gmail.com",
       github: "https://github.com/radhika",
-      linkedIn: "https://linkedin.com/in/radhika",
+      linkedIn: "https://www.linkedin.com/in/radhika-jadaun-9a7113312",
       quote: "Design is where science and art break even"
+    },
+    {
+      id: 4,
+      name: "Akash Agarwal",
+      role: "Data Scientist",
+      image: "assets/Akash1.png",
+      email: "mailto:honeyagarwal043@gmail.com",
+      github: "https://github.com/itsakashagrawal",
+      linkedIn: "https://www.linkedin.com/in/akash-agarwal-a280692a0",
+      quote: "Transforming data into actionable insights"
+    },
+    {
+      id: 5,
+      name: "Aditya Vashishth",
+      role: "Data Scientist",
+      image: "assets/Aditya.webp",
+      email: "mailto:aditya.vashishth95@gmail.com",
+      github: "https://github.com/ThAditya",
+      linkedIn: "https://www.linkedin.com/in/aditya-vashishth-9547182a9",
+      quote: "Numbers tell stories, I just translate them"
     },
   ];
 
@@ -75,14 +76,14 @@ const ContactUs = () => {
         </p>
       </motion.div>
 
-      <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+      <div className="flex flex-wrap  justify-center gap-8 max-w-6xl mx-auto">
         {employees.map((e) => (
           <motion.div 
             key={e.id}
             whileHover={{ scale: 1.05 }}
             onMouseEnter={() => setHovered(e.id)}
             onMouseLeave={() => setHovered(null)}
-            className="relative w-64 h-96 rounded-xl overflow-hidden shadow-lg"
+            className="relative w-80 h-96 rounded-xl overflow-hidden shadow-lg"
           >
             {/* Team member image */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>

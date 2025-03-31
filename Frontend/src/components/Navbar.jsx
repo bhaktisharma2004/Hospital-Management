@@ -51,14 +51,7 @@ function Navbar() {
               Contact Us
             </Link>
           </li>
-          <li>
-            <Link
-              className="p-3 hover:bg-white hover:text-green-600 rounded-xl transition-colors duration-300"
-              to="/"
-            >
-              <i className="fa fa-bars" aria-hidden="true"></i>
-            </Link>
-          </li>
+          
         </ul>
         <div className="register flex gap-5">
           <Link
