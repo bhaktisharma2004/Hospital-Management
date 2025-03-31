@@ -6,8 +6,6 @@ import { FaHouseChimneyMedical,FaHospitalUser } from "react-icons/fa6";
 import { BiSolidInjection } from "react-icons/bi";
 
 
-
-
 const Sidebar = () => {
   return (
     <div>
