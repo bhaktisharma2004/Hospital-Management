@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
-import Sidebar from "./components/sidebar";
+import Admin_Sidebar from "./components/Admin-Dashboard/Admin_Sidebar";
+import Doctor_Sidebar from "./components/Doctor-Dashboard/Doctor_Sidebar"
+import Patient_Sidebar from "./components/Patient-Dashboard/Patient_Sidebar";
 // import { Route, Routes } from "react-router-dom";
 // import Dashboard from './'
 
 function App() {
   return (
     <>
-      <Sidebar />
+    
+
       {/* <Routes> */}
         {/* <Route path="/Dashboard" element={<Dashboard/>}></Route>
         <Route path="/Staff" element={<Staff/>}></Route>
