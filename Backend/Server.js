@@ -6,7 +6,7 @@ const url = process.env.MONGO_URL;
 
 const Port = 8080;
 
-app.listen(Port, (res, req) =>{
+app.listen(Port, (req, res) =>{
     console.log(`Server is running on port ${Port}`);
     mongoose.connect(url);
     console.log('App started');

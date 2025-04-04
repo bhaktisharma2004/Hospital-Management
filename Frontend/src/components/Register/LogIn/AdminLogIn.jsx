@@ -1,11 +1,42 @@
 import React from "react";
 import LogInNav from "./LogInNav";
+import { useState } from "react";
 
 const AdminLogIn = () => {
-  const handleLogin = (event) => {
-    event.preventDefault();
-    console.log("Login button clicked");
-  };
+  const [loginInfo, setloginInfo] = useState({email : "", password : ""});
+  const handleLogin = async (e) => {
+    e.preventDefault()
+    const {email, password} = loginInfo;
+    if(!email || !password){
+      return handleError("email & password required");
+    }
+    try{
+      const response = await fetch(url, {
+        method : "Post",
+        headers : {
+          "Content-Type" : "application/json",
+        },
+        body : JSON.stringify('loginInfo'),
+      })
+
+      if(!response.ok){
+        const error = await response.json();
+        throw new Error(error.message || 'error Occurred')  
+      }
+
+      const result = await response.json();
+      console.log(result);
+      if(success){
+        return handleSuccess("Login Successfull");
+        window.location.href = ""
+      }
+
+    }
+    catch(err){
+      handleError(err.message);
+    }
+  }
+  
   return (
     <>
       <img
