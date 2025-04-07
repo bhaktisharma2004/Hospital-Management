@@ -1,6 +1,5 @@
 import mongoose, { Schema, Document } from "mongoose";
-import { ITask, TaskSchema } from "./Task";
-import { IProject, ProjectSchema } from "./Project";
+
 
 export interface IUser extends Document {
   fullName: string;
@@ -14,8 +13,6 @@ export interface IUser extends Document {
   orgName: string;
   orgRole: string;
 
-  tasks: ITask[];
-  projects: IProject[];
 }
 
 const UserSchema = new Schema<IUser>({
@@ -23,8 +20,6 @@ const UserSchema = new Schema<IUser>({
   email: { type: String, required: true },
   password: { type: String, required: true },
 
-  tasks: { type: [TaskSchema], default: [] },
-  projects: { type: [ProjectSchema], default: [] },
 
   imageURL: { type: String, default: null },
   contactNumber: { type: Number, default: null },
