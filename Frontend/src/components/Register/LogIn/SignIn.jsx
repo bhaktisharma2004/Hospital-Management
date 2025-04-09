@@ -1,14 +1,13 @@
 import React from 'react'
-import Admin  from './AdminLogIn'
-import Doctor from './DoctorLogIn'
-import Patient from './PatientLogIn'
-import PatientLogIn from './PatientLogIn'
+
+import LogIn from './LogIn'
+
 
 const SignIn = () => {
   return (
     <div>
 
-      <PatientLogIn/>
+      <LogIn/>
     </div>
   )
 }

@@ -1,12 +1,11 @@
 import React from "react";
-import LogInNav from "./LogInNav";
+// import LogInNav from "./LogInNav";
 
-const DoctorLogIn = () => {
+const LogIn = () => {
   const handleLogin = (event) => {
     event.preventDefault();
     console.log("Login button clicked");
   };
-
   return (
     <>
       <img
@@ -15,9 +14,9 @@ const DoctorLogIn = () => {
         alt="Background"
       />
       <div className="flex flex-col items-center relative z-10 justify-center min-h-screen">
-        <LogInNav />
-        <div className="z-10 bg-white p-8 w-100 rounded-lg shadow-md">
-          <h1 className="text-2xl flex flex-col items-center font-bold mb-4">Patient Login</h1>
+        {/* <LogInNav /> */}
+        <div className="z-10 bg-white p-8 w-100  rounded-lg shadow-md">
+          <h1 className="text-2xl flex flex-col items-center font-bold mb-4">Login</h1>
           <form onSubmit={handleLogin}>
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -56,4 +55,4 @@ const DoctorLogIn = () => {
   );
 };
 
-export default DoctorLogIn;
+export default LogIn;

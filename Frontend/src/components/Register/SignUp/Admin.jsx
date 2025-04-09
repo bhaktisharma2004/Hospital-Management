@@ -3,10 +3,10 @@ import Signupnav from "./Signupnav";
 import { FaUser, FaEnvelope, FaPhone, FaIdCard, FaCalendar, FaVenusMars, FaLock, FaMapMarker } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -47,54 +47,54 @@ const Admin = () => {
       return;
     }
 
-    try {
-      const client = await MongoClient.connect('mongodb://localhost:27017');
-      const db = client.db('your-database-name');
+    // try {
+      // const client = await MongoClient.connect('mongodb://localhost:27017');
+      // const db = client.db('your-database-name');
       
       // Check if user already exists
-      const existingUser = await db.collection('users').findOne({ 
-        $or: [
-          { email: formData.email },
-          { mobNumber: formData.mobNumber },
-          { AdharCard: formData.AdharCard }
-        ]
-      });
+      // const existingUser = await db.collection('users').findOne({ 
+      //   $or: [
+      //     { email: formData.email },
+      //     { mobNumber: formData.mobNumber },
+      //     { AdharCard: formData.AdharCard }
+      //   ]
+      // });
 
-      if (existingUser) {
-        client.close();
-        toast.error("User with this email, mobile, or Aadhar already exists");
-        return;
-      }
+      // if (existingUser) {
+      //   client.close();
+      //   toast.error("User with this email, mobile, or Aadhar already exists");
+      //   return;
+      // }
 
       // Create new user document
-      const newUser = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        mobNumber: formData.mobNumber,
-        AdharCard: formData.AdharCard,
-        DOB: new Date(formData.DOB),
-        Gender: formData.Gender,
-        password: formData.password, // Note: In production, you should hash this!
-        Address: formData.Address,
-        role: "admin",
-        createdAt: new Date()
-      };
+      // const newUser = {
+      //   firstName: formData.firstName,
+      //   lastName: formData.lastName,
+      //   email: formData.email,
+      //   mobNumber: formData.mobNumber,
+      //   AdharCard: formData.AdharCard,
+      //   DOB: new Date(formData.DOB),
+      //   Gender: formData.Gender,
+      //   password: formData.password, // Note: In production, you should hash this!
+      //   Address: formData.Address,
+      //   role: "admin",
+      //   createdAt: new Date()
+      // };
 
       // Insert into MongoDB
-      const result = await db.collection('users').insertOne(newUser);
-      client.close();
+      // const result = await db.collection('users').insertOne(newUser);
+      // client.close();
 
-      if (result.insertedId) {
-        toast.success("Admin registration successful!");
-        navigate("/admin/login");
-      } else {
-        throw new Error("Registration failed");
-      }
-    } catch (error) {
-      console.error("Registration error:", error);
-      toast.error(error.message || "Registration failed. Please try again.");
-    }
+      // if (result.insertedId) {
+      //   toast.success("Admin registration successful!");
+      //   navigate("/admin/login");
+      // } else {
+      //   throw new Error("Registration failed");
+      // }
+    // } catch (error) {
+    //   console.error("Registration error:", error);
+    //   toast.error(error.message || "Registration failed. Please try again.");
+    // }
   };
 
   return (
@@ -105,7 +105,7 @@ const Admin = () => {
         alt="Background" 
       />
 
-      <div className="flex flex-col items-center relative z-10 justify-center min-h-screen py-8">
+      <div className="flex flex-col items-center relative z-10 justify-center">
         <Signupnav />
 
         <div className="bg-white bg-opacity-90 rounded-lg shadow-2xl p-6 w-full max-w-4xl transform transition-all duration-500 hover:shadow-3xl">
