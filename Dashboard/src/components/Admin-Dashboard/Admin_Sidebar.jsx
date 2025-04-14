@@ -9,13 +9,15 @@ import {
 } from "react-icons/md";
 import { FaHouseChimneyMedical, FaHospitalUser } from "react-icons/fa6";
 import { BiSolidInjection } from "react-icons/bi";
+import Dashboard from "./Dashboard";
+import Chart from "./chart";
 
 const Admin_Sidebar = () => {
   return (
-    <div>
-      <div className=" w-80 bg-green-300">
+    <div className="flex">
+      <div className=" w-[20%] bg-green-300 ">
         <RxHamburgerMenu className="font-bold text-4xl ml-5 h-30" />
-        <ul className="pl-8 gap-10 text-2xl font-bold flex flex-col h-700 w-100">
+        <ul className="pl-8 gap-10 text-2xl font-bold flex flex-col h-150 w-100">
           <li className="flex flex-row gap-3 items-center ">
             {" "}
             <MdDashboardCustomize className="" /> Dashboard
@@ -45,6 +47,9 @@ const Admin_Sidebar = () => {
             <MdPersonalInjury /> Patient
           </li>
         </ul>
+      </div>
+      <div className="right w-[80%]" ><Dashboard/>
+        <Chart/>
       </div>
     </div>
   );

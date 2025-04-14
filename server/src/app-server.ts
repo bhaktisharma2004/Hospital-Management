@@ -30,7 +30,7 @@ app.use(express.json()); // <---- This is required
 // MongoDB Atlas connection
 mongoose
   .connect(mongoDBurl, {
-    serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds if no connection
+    serverSelectionTimeoutMS: 5000, 
   })
   .then(() => {
     console.log("✅ Connected to MongoDB Atlas");

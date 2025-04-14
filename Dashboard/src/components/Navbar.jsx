@@ -8,6 +8,12 @@ const Navbar = () => {
         <li>
             <Link to='/'>Admin</Link>
         </li>
+        <li>
+            <Link to='/doctor'>Doctor</Link>
+        </li>
+        <li>
+            <Link to='/patient'>Patient</Link>
+        </li>
       </ul>
     </div>
   )

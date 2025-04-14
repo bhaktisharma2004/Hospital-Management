@@ -63,7 +63,7 @@ const Patient = () => {
               <input
                 type="number"
                 className="border-2 border-blue-200 rounded-lg p-3 pl-10 w-full focus:border-blue-500 focus:outline-none"
-                placeholder="Adhar Card Number"
+                placeholder="NIC"
               />
             </div>
             <div className="relative">
@@ -98,14 +98,14 @@ const Patient = () => {
                 placeholder="Password"
               />
             </div>
-            <div className="password relative">
+            {/* <div className="password relative">
               <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
               <input
                 type="password"
                 className="border-2 border-blue-200 rounded-lg p-3 pl-10 w-full focus:border-blue-500 focus:outline-none"
                 placeholder="Confirm Password"
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="message items-center flex mb-5 flex-col mt-6">

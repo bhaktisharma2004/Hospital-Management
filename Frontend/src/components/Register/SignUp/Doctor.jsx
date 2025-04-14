@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Signupnav from "./Signupnav";
 import {
   FaUser,
@@ -13,12 +13,12 @@ import {
 } from "react-icons/fa";
 
 const Doctor = () => {
+  const [date, setDate] = useState("");
   return (
     <>
-      
       <img
         className="absolute w-full h-full object-cover opacity-30 z-0"
-        src="/assets/bg.jpg" 
+        src="/assets/bg.jpg"
         alt="Background"
       />
       <div className="flex flex-col items-center relative z-10  justify-center">
@@ -73,20 +73,23 @@ const Doctor = () => {
               <input
                 type="number"
                 className="border-2 border-blue-200 rounded-lg p-3 pl-10 w-full focus:border-blue-500 focus:outline-none"
-                placeholder="Adhar Card Number"
+                placeholder="NIC"
               />
             </div>
 
-            <div className="password relative">
-              <FaVenusMars className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
-              <select className="border-2 border-blue-200 rounded-lg p-3 pl-10 w-full focus:border-blue-500 focus:outline-none">
-                <option className="text-blue-500" value="Gender">
-                  Gender
-                </option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
+            <div className="relative">
+              <FaCalendar className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
+              <input
+                className="border-2 border-blue-200 text-gray-500 rounded-lg p-3 pl-10 w-full appearance-none focus:border-blue-500 focus:outline-none"
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              />
+              {!date && (
+                <span className="absolute left-10 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none bg-white px-2">
+                  Date of Birth
+                </span>
+              )}
             </div>
 
             <div className="details relative">
@@ -108,6 +111,17 @@ const Doctor = () => {
             </div>
 
             <div className="password relative">
+              <FaVenusMars className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
+              <select className="border-2 border-blue-200 rounded-lg p-3 pl-10 w-full focus:border-blue-500 focus:outline-none">
+                <option className="text-blue-500" value="Gender">
+                  Gender
+                </option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div className="password relative">
               <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
               <input
                 type="password"
@@ -115,24 +129,24 @@ const Doctor = () => {
                 placeholder="Password"
               />
             </div>
-            <div className="password relative">
+            {/* <div className="password relative">
               <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
               <input
                 type="password"
                 className="border-2 border-blue-200 rounded-lg p-3 pl-10 w-full focus:border-blue-500 focus:outline-none"
                 placeholder="Confirm Password"
               />
-            </div>
+            </div> */}
           </div>
 
-            <div className="message  items-center flex mb-5 flex-col">
-              <a
-                className="p-3 w-55 text-center font-bold bg-blue-600 text-white rounded-lg mt-6 hover:bg-blue-700 transition duration-300 transform hover:scale-105"
-                href="/"
-              >
-                Register
-              </a>
-            </div>
+          <div className="message  items-center flex mb-5 flex-col">
+            <a
+              className="p-3 w-55 text-center font-bold bg-blue-600 text-white rounded-lg mt-6 hover:bg-blue-700 transition duration-300 transform hover:scale-105"
+              href="/"
+            >
+              Register
+            </a>
+          </div>
         </div>
       </div>
     </>

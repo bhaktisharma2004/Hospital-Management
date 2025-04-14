@@ -6,7 +6,7 @@ import { SECRET_KEY } from "./jsonWebToken-Config";
 
 const signupController = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
-    const { fullName, email, password } = req.body;
+    const { firstName, lastName, email, mobNumber, NIC, DOB, gender, specialty, experience, password } = req.body;
 
     // Check if the user already exists
     const existingUser = await User.findOne({ email });
@@ -18,8 +18,8 @@ const signupController = async (req: Request, res: Response, next: NextFunction)
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create and save the new user
-    const newUser: IUser = new User({ fullName, email, password: hashedPassword });
+   
+    const newUser: IUser = new User({ firstName,lastName, email, mobNumber, NIC, DOB, gender, experience, specialty, password: hashedPassword });
     await newUser.save();
     console.log(newUser)
 
@@ -28,7 +28,7 @@ const signupController = async (req: Request, res: Response, next: NextFunction)
 
     res.status(201).json({ token });
   } catch (error) {
-    next(error); // Pass the error to the global error handler
+    next(error); 
   }
 };
 
