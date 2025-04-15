@@ -1,10 +1,36 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AdminProfile from './Admin-Dashboard/AdminProfile'
+import Notifications from './Admin-Dashboard/Notifications'
+
 
 const Navbar = () => {
   return (
-    <div>
-      <ul className='flex gap-10 bg-green-300'>
+    <div className='h-25 bg-green-300 flex justify-evenly gap-100 items-center rounded-2xl'>
+      <div className=''>
+          <Link className="flex gap-4 items-center" to="/">
+            <img
+              src="assets/logo.jpeg"
+              className="rounded-full transform hover:scale-110 transition-transform duration-300"
+              style={{ width: "60px" }}
+              alt="logo"
+            />
+            <span className="text-gray-800 text-lg font-bold hover:text-gray-600 transition-colors duration-300">
+              MediSphere Hospital
+            </span>
+          </Link>
+        </div>
+        <div className="btns flex items-center gap-20">
+
+        <div className="notification">
+          <Notifications/>
+        </div>
+        <div className="profile">
+          <AdminProfile/>
+        </div>
+        </div>
+
+      {/* <ul className='flex gap-10 '>
         <li>
             <Link to='/'>Admin</Link>
         </li>
@@ -14,7 +40,7 @@ const Navbar = () => {
         <li>
             <Link to='/patient'>Patient</Link>
         </li>
-      </ul>
+      </ul> */}
     </div>
   )
 }
