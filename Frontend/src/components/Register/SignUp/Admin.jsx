@@ -3,7 +3,7 @@ import Signupnav from "./Signupnav";
 import { FaUser, FaEnvelope, FaPhone, FaIdCard, FaCalendar, FaVenusMars, FaLock, FaMapMarker } from "react-icons/fa";
 // import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const URL = "http://localhost:4200/signup";
+
 // import { useNavigate } from "react-router-dom";
 
 const Admin = () => {

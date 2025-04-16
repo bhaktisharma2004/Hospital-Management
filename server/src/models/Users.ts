@@ -18,7 +18,7 @@ export interface IUser extends Document {
   NIC: string;
   dob: Date;
   specialty : string,
-  experience : number, 
+  experience : string, 
   password: string;
   address: number;
 
@@ -35,7 +35,8 @@ const UserSchema = new Schema<IUser>({
   dob: { type: Date, default: null },
   gender: { type: String, default: null },
   specialty: { type: String, required : true },
-  experience: { type: Number, required : true },
+  experience: { type: String, required : true },
+  
   role: {type: String, required: true, default: UserType.Patient },
   password: { type: String, required: true },
   address: { type: Number, default: null },
