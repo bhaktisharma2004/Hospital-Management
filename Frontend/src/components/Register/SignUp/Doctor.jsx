@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Signupnav from "./Signupnav";
+import { useNavigate } from "react-router-dom";
+
 import {
   FaUser,
   FaEnvelope,
@@ -12,7 +14,9 @@ import {
   FaBook,
 } from "react-icons/fa";
 
+
 const Doctor = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -105,6 +109,10 @@ const Doctor = () => {
         role: "doctor",
         password: "",
       });
+
+
+      
+      navigate("../Login");
     } catch (error) {
       console.error("Registration error:", error);
       if (error.response) {
@@ -227,10 +235,11 @@ const Doctor = () => {
                   name="DOB"
                   value={formData.DOB}
                   onChange={handleChange}
+                  placeholder="Date of Birth"
                 />
                 {!formData.DOB && (
                   <span className="absolute left-10 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none bg-white px-2">
-                    Date of Birth
+                    {/* Date of Birth */}
                   </span>
                 )}
                 {errors.DOB && <span className="text-red-500 text-sm">{errors.DOB}</span>}
@@ -273,7 +282,7 @@ const Doctor = () => {
                   onChange={handleChange}
                   className={`border-2 ${errors.gender ? 'border-red-500' : 'border-blue-200'} rounded-lg p-3 pl-10 w-full focus:border-blue-500 focus:outline-none`}
                 >
-                  <option value="">Gender</option>
+                  <option value="" disabled>Gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="other">Other</option>
