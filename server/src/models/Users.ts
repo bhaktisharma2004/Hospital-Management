@@ -2,13 +2,6 @@ import { Admin } from "mongodb";
 import mongoose, { Schema, Document } from "mongoose";
 
 
-// export enum UserType {
-//   Doctor = "doctor",
-//   Patient = "patient",
-//   Admin = "admin"
-// }
-
-
 export interface IPatient extends Document {
   firstName: string;
   lastName: string;
