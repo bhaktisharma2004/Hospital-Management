@@ -2,6 +2,7 @@ import express from "express";
 const router = express.Router();
 
 import signupController from "./controllers/signupController";
+import patientSignupController from "./controllers/patientSignupController";
 
 import loginController from "./controllers/loginController";
 
@@ -15,7 +16,9 @@ import editUserController from "./controllers/editUser";
 import deleteUserController from "./controllers/deleteUser";
 
 // Auth Routes
+
 router.post("/signup", signupController);
+router.post("/patientsignup", patientSignupController);
 router.post("/login", loginController);
 router.post("/logout", logoutController);
 router.get("/getcurusr", getCurrentUserController);

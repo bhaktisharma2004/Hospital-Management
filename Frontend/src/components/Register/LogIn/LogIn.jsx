@@ -1,11 +1,23 @@
-import React from "react";
-// import LogInNav from "./LogInNav";
+import React, { useState } from "react";
+import axios from "axios";
+
 
 const LogIn = () => {
-  const handleLogin = (event) => {
-    event.preventDefault();
-    console.log("Login button clicked");
-  };
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = async(e) =>{
+    e.preventDefault();
+    try {
+      const res = await axios.post('http://localhost:4200/login', {email, password});  
+      console.log(res.data);
+      window.location.href="http://localhost:5173/"
+      
+      
+    } catch (error) {
+      console.log('Error: ', error);
+    }
+  }
   return (
     <>
       <img
@@ -27,6 +39,7 @@ const LogIn = () => {
                 id="email"
                 type="email"
                 placeholder="Enter your email"
+                onChange={(e)=>setEmail(e.target.value)}
               />
             </div>
             <div className="mb-6">
@@ -38,12 +51,14 @@ const LogIn = () => {
                 id="password"
                 type="password"
                 placeholder="Enter your password"
+                onChange = {(e)=>setPassword(e.target.value)}
               />
             </div>
             <div className="flex items-center justify-center">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline"
-                type="submit"
+                // type="submit"
+                onClick ={handleLogin}
               >
                 Log In
               </button>

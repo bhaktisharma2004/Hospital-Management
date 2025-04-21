@@ -9,6 +9,9 @@ import {
 } from "react-icons/md";
 import { FaHouseChimneyMedical, FaHospitalUser } from "react-icons/fa6";
 import { BiSolidInjection } from "react-icons/bi";
+import Dashboard from "./DocDashboard";
+
+
 const Doctor_Sidebar = () => {
   return (
     <div>
@@ -46,6 +49,9 @@ const Doctor_Sidebar = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="right w-[80%]" >
+        <Dashboard/>
       </div>
     </div>
   );

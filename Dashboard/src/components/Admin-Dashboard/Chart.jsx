@@ -50,8 +50,8 @@ const Chart = () => {
   }, []);
 
   return (
-    <div className="flex">
-      <div className="left bg-yellow-100 p-2 ml-10 w-125 h-100  rounded-2xl shadow-md">
+    <div className="flex mr-10">
+      <div className="left bg-yellow-100 p-2 ml-6 w-120 h-100  rounded-2xl shadow-md">
         <div className="flex justify-between items-center ">
           <h2 className="text-xl font-semibold text-gray-700">Patients</h2>
           <span className="text-sm text-gray-500">Last 7 days</span>
@@ -86,8 +86,8 @@ const Chart = () => {
         </div>
       </div>
 
-      <div className="right w-125  ">
-        <div className="right bg-white p-4 ml-4 w-full rounded-2xl shadow-md">
+      <div className="right w-120   ">
+        <div className="right bg-yellow-200 p-4 ml-4 w-full h-100 rounded-2xl shadow-md">
           <div className="mb-4">
             <h2 className="text-xl font-semibold text-gray-700">
               Appointments
